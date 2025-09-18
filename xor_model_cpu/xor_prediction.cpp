@@ -16,12 +16,6 @@ dtype sigmoid(dtype x)
     return 1.0 / (1.0 + exp(-x));
 }
 
-// Function to train a single gate model (NAND, OR, or AND)
-// This version uses pointers for dynamic memory
-#include <iostream>
-#include <cmath>
-
-// ... (other parts of the code) ...
 
 // Function to train a single gate model with early stopping
 void train_gate(dtype *gate_outputs, dtype &w1, dtype &w2, dtype &b, dtype **inputs)
@@ -77,6 +71,7 @@ void train_gate(dtype *gate_outputs, dtype &w1, dtype &w2, dtype &b, dtype **inp
         }
     }
 }
+
 // Function to predict a single gate's output
 dtype predict_gate(dtype x1, dtype x2, dtype w1, dtype w2, dtype b)
 {
